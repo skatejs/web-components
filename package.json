@@ -1,15 +1,15 @@
 {
   "name": "skatejs-web-components",
-  "version": "0.0.0",
   "description": "",
   "jsnext:main": "src/index.js",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skatejs/web-components.git"
+    "url": "https://github.com/skatejs/web-components.git"
   },
   "author": "",
   "license": "MIT",
@@ -24,7 +24,8 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "1.x",
-    "skatejs-build": "7.x"
+    "skatejs-build": "7.x",
+    "semantic-release": "^4.3.5"
   },
   "config": {
     "commitizen": {
