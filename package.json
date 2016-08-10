@@ -4,7 +4,7 @@
   "jsnext:main": "src/index.js",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "echo \"No tests\" && exit 0",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
