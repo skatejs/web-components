@@ -2,7 +2,8 @@
   "name": "skatejs-web-components",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "jsnext:main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,9 +17,14 @@
     "url": "https://github.com/skatejs/web-components/issues"
   },
   "homepage": "https://github.com/skatejs/web-components#readme",
+  "dependencies": {
+    "es6-collections": "0.x",
+    "skatejs-named-slots": "1.x",
+    "webcomponents.js": "webcomponents/webcomponentsjs#b77ca74"
+  },
   "devDependencies": {
-    "cz-conventional-changelog": "^1.1.7",
-    "skatejs-build": "^7.1.0"
+    "cz-conventional-changelog": "1.x",
+    "skatejs-build": "7.x"
   },
   "config": {
     "commitizen": {
