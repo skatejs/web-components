@@ -10,6 +10,6 @@ import 'skatejs-web-components';
 
 Or if you're kickin it old-school:
 
-```js
+```html
 <script src="https://npmcdn.com/skatejs-web-components"></script>
 ```
