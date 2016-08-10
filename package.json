@@ -7,6 +7,18 @@
     "test": "echo \"No tests\" && exit 0",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
+  "keywords": [
+    "components",
+    "custom",
+    "custom-elements",
+    "elements",
+    "web",
+    "web-components"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/skatejs/web-components.git"
