@@ -4,8 +4,8 @@
   "jsnext:main": "src/index.js",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"No tests\" && exit 0",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "prepublish": "rollup --config rollup.config.js && webpack --config webpack.config.js",
+    "test": "karma start --single-run"
   },
   "keywords": [
     "components",
