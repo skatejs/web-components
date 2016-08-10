@@ -1,0 +1,28 @@
+{
+  "name": "skatejs-web-components",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skatejs/web-components.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skatejs/web-components/issues"
+  },
+  "homepage": "https://github.com/skatejs/web-components#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.7",
+    "skatejs-build": "^7.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
