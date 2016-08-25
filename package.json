@@ -1,5 +1,6 @@
 {
   "name": "skatejs-web-components",
+  "version": "0.0.0-semantically-released",
   "description": "",
   "jsnext:main": "src/index.js",
   "main": "dist/index.js",
