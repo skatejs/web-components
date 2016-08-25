@@ -1,5 +1,6 @@
 {
   "name": "skatejs-web-components",
+  "version": "0.0.0-semantically-released",
   "description": "",
   "jsnext:main": "src/index.js",
   "main": "dist/index.js",
@@ -32,7 +33,7 @@
   "dependencies": {
     "es6-collections": "0.x",
     "skatejs-named-slots": "1.x",
-    "webcomponents.js": "webcomponents/webcomponentsjs#b77ca74"
+    "webcomponents.js": "jpnelson/webcomponentsjs#b8755904"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1.x",
