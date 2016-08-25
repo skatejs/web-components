@@ -32,7 +32,7 @@
   "dependencies": {
     "es6-collections": "0.x",
     "skatejs-named-slots": "1.x",
-    "webcomponents.js": "webcomponents/webcomponentsjs#b77ca74"
+    "webcomponents.js": "webcomponents/webcomponentsjs#393764a5"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1.x",
