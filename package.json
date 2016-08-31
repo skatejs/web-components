@@ -30,14 +30,14 @@
   },
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
-    "es6-collections": "0.x",
+    "document-register-element": "1.x",
     "skatejs-named-slots": "1.x",
-    "webcomponents.js": "webcomponents/webcomponentsjs#b77ca74"
+    "webcomponents.js": "0.x"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1.x",
     "skatejs-build": "7.x",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "4.x"
   },
   "config": {
     "commitizen": {
