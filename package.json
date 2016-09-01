@@ -31,8 +31,7 @@
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
     "document-register-element": "1.x",
-    "skatejs-named-slots": "1.x",
-    "webcomponents.js": "0.x"
+    "skatejs-named-slots": "1.x"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1.x",
