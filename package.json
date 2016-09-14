@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
-    "document-register-element": "1.0.9",
-    "skatejs-named-slots": "1.x"
+    "document-register-element": "1.1.0",
+    "skatejs-named-slots": "1.2.3"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1.x",
