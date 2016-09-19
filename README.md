@@ -12,10 +12,10 @@ You can install via NPM:
 npm install skatejs-web-components
 ```
 
-Or you can download it from NPMCDN:
+Or you can download it from unpkg:
 
 ```
-https://npmcdn.com/skatejs-web-components/dist/index-with-deps.min.js
+https://unpkg.com/skatejs-web-components/dist/index-with-deps.min.js
 ```
 
 
@@ -38,4 +38,4 @@ require(['skatejs-web-components']);
 Or you can use a `<script>` tag:
 
 ```html
-<script src="https://npmcdn.com/skatejs-web-components/dist/index-with-deps.min.js"></script>
+<script src="https://unpkg.com/skatejs-web-components/dist/index-with-deps.min.js"></script>
