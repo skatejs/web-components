@@ -19,7 +19,7 @@ describe('skatejs-web-components', () => {
     expect(!!elem.shadowRoot).to.equal(true);
   });
 
-  patch && describe('#16 - safari recalc bug', (done) => {
+  patch && describe('#16 - safari recalc bug', () => {
     function getDescriptor(name) {
       return Object.getOwnPropertyDescriptor(Element.prototype, name) ||
         Object.getOwnPropertyDescriptor(HTMLElement.prototype, name);
@@ -37,7 +37,7 @@ describe('skatejs-web-components', () => {
       expect(getDescriptor('attachShadow').writable).to.equal(true);
     });
 
-    it('functionality', () => {
+    it('functionality', (done) => {
       const div = document.createElement('div');
       div.attachShadow({ mode: 'open' });
 
@@ -53,14 +53,22 @@ describe('skatejs-web-components', () => {
       // Wait for the first flow / layout the style element will cause.
       setTimeout(() => {
         // Then set the style content.
-        style.textContent = 'p { border: 1px solid rgb(0, 0, 0); }';
+        style.textContent = 'p { border: 1px solid black; }';
 
         // We must wait until the next reflow / relayout updating the style element causes to then
         // check if it appolied.
         setTimeout(() => {
-          expect(window.getComputedStyle(p).border).to.equal('1px solid rgb(0, 0, 0)');
-          body.removeChild(div);
-          done();
+          expect(window.getComputedStyle(p).borderWidth).to.equal('1px');
+          style.textContent = '';
+          setTimeout(() => {
+            expect(window.getComputedStyle(p).borderWidth).to.equal('0px');
+            style.textContent = 'p { border: 1px solid black; }';
+            setTimeout(() => {
+              expect(window.getComputedStyle(p).borderWidth).to.equal('1px');
+              body.removeChild(div);
+              done();
+            });
+          });
         });
       });
     });
