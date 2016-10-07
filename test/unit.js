@@ -1,4 +1,7 @@
+/* eslint no-unused-expressions: 0 */
+
 import '../src/index';
+import patch from '../src/fix/safari';
 
 const { body } = document;
 const { customElements } = window;
@@ -16,28 +19,49 @@ describe('skatejs-web-components', () => {
     expect(!!elem.shadowRoot).to.equal(true);
   });
 
-  it('#16 - safari recalc bug', (done) => {
-    const div = document.createElement('div');
-    div.attachShadow({ mode: 'open' });
+  patch && describe('#16 - safari recalc bug', (done) => {
+    function getDescriptor(name) {
+      return Object.getOwnPropertyDescriptor(Element.prototype, name) ||
+        Object.getOwnPropertyDescriptor(HTMLElement.prototype, name);
+    }
 
-    const style = document.createElement('style');
-    div.shadowRoot.appendChild(style);
+    it('configurable', () => {
+      expect(getDescriptor('attachShadow').configurable).to.equal(true);
+    });
 
-    const p = document.createElement('p');
-    div.shadowRoot.appendChild(p);
-    p.appendChild(document.createTextNode('testing'));
+    it('enumerable', () => {
+      expect(getDescriptor('attachShadow').enumerable).to.equal(true);
+    });
+
+    it('writable', () => {
+      expect(getDescriptor('attachShadow').writable).to.equal(true);
+    });
+
+    it('functionality', () => {
+      const div = document.createElement('div');
+      div.attachShadow({ mode: 'open' });
+
+      const style = document.createElement('style');
+      div.shadowRoot.appendChild(style);
+
+      const p = document.createElement('p');
+      div.shadowRoot.appendChild(p);
+      p.appendChild(document.createTextNode('testing'));
 
 
-    body.appendChild(div);
-    setTimeout(() => {
-      // The style content must be set after it is first calculated into flow / layout.
-      style.textContent = 'p { border: 1px solid rgb(0, 0, 0); }';
-
-      // We must wait until the next reflow / recalc.
+      body.appendChild(div);
+      // Wait for the first flow / layout the style element will cause.
       setTimeout(() => {
-        expect(window.getComputedStyle(p).border).to.equal('1px solid rgb(0, 0, 0)');
-        body.removeChild(div);
-        done();
+        // Then set the style content.
+        style.textContent = 'p { border: 1px solid rgb(0, 0, 0); }';
+
+        // We must wait until the next reflow / relayout updating the style element causes to then
+        // check if it appolied.
+        setTimeout(() => {
+          expect(window.getComputedStyle(p).border).to.equal('1px solid rgb(0, 0, 0)');
+          body.removeChild(div);
+          done();
+        });
       });
     });
   });

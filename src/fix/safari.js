@@ -1,3 +1,5 @@
+const patch = navigator.userAgent.indexOf('Safari/60') !== -1;
+
 // Workaround for https://bugs.webkit.org/show_bug.cgi?id=160331
 function fixSafari() {
   let oldAttachShadow = HTMLElement.prototype.attachShadow;
@@ -31,24 +33,17 @@ function fixSafari() {
   Object.defineProperty(HTMLElement.prototype, 'attachShadow', {
     // Ensure polyfills can override it (hoping they call it back).
     configurable: true,
-
-    // Always return our version even if it's assigned directly. Some polyfills try to assign a
-    // function directly to the property, so we have to make sure our fix isn't overridden.
-    get() {
-      return newAttachShadow;
-    },
-
-    // If a polyfill tries to override it, we store the override and call it instead of the
-    // native one.
-    set(val) {
-      oldAttachShadow = val;
-    },
+    enumerable: true,
+    value: newAttachShadow,
+    writable: true,
   });
 }
 
 // We target a specific version of Safari instead of trying to but detect as it seems to involve
 // contriving a breaking case and detecting computed styles. We can remove this code when Safari
 // fixes the bug.
-if (navigator.userAgent.indexOf('Safari/60') !== -1) {
+if (patch) {
   fixSafari();
 }
+
+export default patch;

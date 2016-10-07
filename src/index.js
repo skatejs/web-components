@@ -1,3 +1,3 @@
-//import 'skatejs-named-slots';
+import 'skatejs-named-slots';
 import 'document-register-element';
 import './fix/safari';
