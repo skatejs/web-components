@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "sk-bundle",
-    "test": "exit 0"
+    "test": "sk-tests"
   },
   "keywords": [
     "components",
