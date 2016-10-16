@@ -1,5 +1,9 @@
-const { HTMLElement, MutationObserver } = window;
-const patch = navigator.userAgent.indexOf('Safari/60') !== -1;
+const { HTMLElement, MutationObserver, natigator } = window;
+const { userAgent } = navigator;
+const safari = userAgent.indexOf('Safari/60') !== -1;
+const safariVersion = safari && userAgent.match(/Version\/([^\s]+)/)[1];
+const safariVersions = [0, 1].map(v => `10.0.${v}`);
+const patch = safari && safariVersions.indexOf(safariVersion) > -1;
 
 // Workaround for https://bugs.webkit.org/show_bug.cgi?id=160331
 function fixSafari () {
