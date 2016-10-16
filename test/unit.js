@@ -1,15 +1,15 @@
-/* eslint no-unused-expressions: 0 */
+/* eslint-env jasmine, mocha */
 
 import '../src/index';
 import patch from '../src/fix/safari';
 
 const { body } = document;
-const { customElements } = window;
+const { customElements, Element, HTMLElement } = window;
 
 describe('skatejs-web-components', () => {
   it('should create a custom element with a shadow root', () => {
     const Elem = class extends HTMLElement {
-      constructor() {
+      constructor () {
         super();
         this.attachShadow({ mode: 'open' });
       }
@@ -20,7 +20,7 @@ describe('skatejs-web-components', () => {
   });
 
   patch && describe('#16 - safari recalc bug', () => {
-    function getDescriptor(name) {
+    function getDescriptor (name) {
       return Object.getOwnPropertyDescriptor(Element.prototype, name) ||
         Object.getOwnPropertyDescriptor(HTMLElement.prototype, name);
     }
@@ -47,7 +47,6 @@ describe('skatejs-web-components', () => {
       const p = document.createElement('p');
       div.shadowRoot.appendChild(p);
       p.appendChild(document.createTextNode('testing'));
-
 
       body.appendChild(div);
       // Wait for the first flow / layout the style element will cause.

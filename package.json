@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "1.x",
-    "skatejs-build": "8.x",
-    "semantic-release": "4.x"
+    "semantic-release": "4.x",
+    "skatejs-build": "^9.1.0"
   },
   "config": {
     "commitizen": {

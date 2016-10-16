@@ -1,7 +1,8 @@
+const { HTMLElement, MutationObserver } = window;
 const patch = navigator.userAgent.indexOf('Safari/60') !== -1;
 
 // Workaround for https://bugs.webkit.org/show_bug.cgi?id=160331
-function fixSafari() {
+function fixSafari () {
   let oldAttachShadow = HTMLElement.prototype.attachShadow;
 
   // We observe a shadow root, but only need to know if the target that was mutated is a <style>
@@ -23,7 +24,7 @@ function fixSafari() {
 
   // Our override simply calls the native (or overridden) attachShadow but it ensures that changes
   // to it are observed so that we can take any <style> elements and re-insert them.
-  function newAttachShadow(opts) {
+  function newAttachShadow (opts) {
     const sr = oldAttachShadow.call(this, opts);
     mo.observe(sr, moOpts);
     return sr;
@@ -35,7 +36,7 @@ function fixSafari() {
     configurable: true,
     enumerable: true,
     value: newAttachShadow,
-    writable: true,
+    writable: true
   });
 }
 
