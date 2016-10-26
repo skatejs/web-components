@@ -31,12 +31,12 @@
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
     "document-register-element": "1.2.0",
-    "skatejs-named-slots": "^1.3.0"
+    "skatejs-named-slots": "2.0.1"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1.x",
     "semantic-release": "4.x",
-    "skatejs-build": "^9.1.0"
+    "skatejs-build": "10.x"
   },
   "config": {
     "commitizen": {

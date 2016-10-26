@@ -1,4 +1,4 @@
-const { HTMLElement, MutationObserver, natigator } = window;
+const { HTMLElement, MutationObserver, navigator } = window;
 const { userAgent } = navigator;
 const safari = userAgent.indexOf('Safari/60') !== -1;
 const safariVersion = safari && userAgent.match(/Version\/([^\s]+)/)[1];
