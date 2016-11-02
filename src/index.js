@@ -2,5 +2,5 @@
 // overrides attachShadow() and calls back the one it finds on HTMLElement.
 import './fix/safari';
 import 'document-register-element';
-import '@webcomponents/shadycss';
 import '@webcomponents/shadydom';
+import '@webcomponents/shadycss';
