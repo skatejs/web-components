@@ -36,9 +36,9 @@
     "@webcomponents/shadydom": "https://github.com/webcomponents/shadydom/archive/e4a8be7b4dceb94b79de10ee450848a339ad1a58.tar.gz"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "1.x",
-    "semantic-release": "4.x",
-    "skatejs-build": "11.x"
+    "cz-conventional-changelog": "1",
+    "semantic-release": "4",
+    "skatejs-build": "12"
   },
   "config": {
     "commitizen": {
