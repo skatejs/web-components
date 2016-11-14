@@ -31,14 +31,12 @@
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
     "document-register-element": "1.2.0",
-    "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/a0f55ecbb17eee97aab877cfda9ac3a16b3b14ac.tar.gz",
-    "@webcomponents/shadycss": "https://github.com/webcomponents/shadycss/archive/3002ac1fc9d59893f50dfad922dd503bca64300c.tar.gz",
-    "@webcomponents/shadydom": "https://github.com/webcomponents/shadydom/archive/e4a8be7b4dceb94b79de10ee450848a339ad1a58.tar.gz"
+    "skatejs-named-slots": "2.0.4"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1.x",
     "semantic-release": "4.x",
-    "skatejs-build": "9.x"
+    "skatejs-build": "10.x"
   },
   "config": {
     "commitizen": {
