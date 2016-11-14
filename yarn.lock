@@ -5752,9 +5752,9 @@ skatejs-build@10.x:
     webpack "1.13.2"
     webpack-dev-server "1.16.2"
 
-skatejs-named-slots@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/skatejs-named-slots/-/skatejs-named-slots-2.0.4.tgz#66ab654f80ba553d956df8c76ec65b8fc9fe2362"
+skatejs-named-slots@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/skatejs-named-slots/-/skatejs-named-slots-2.0.5.tgz#0ce434d794e46397b1a6f4fcce7b3201345844ae"
   dependencies:
     custom-event-polyfill "^0.3.0"
     debounce "^1.0.0"
