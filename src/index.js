@@ -1,7 +1,12 @@
-// We load the Safari fix before document-register-element because DRE
-// overrides attachShadow() and calls back the one it finds on HTMLElement.
+// We load the Safari fix first because the custom element polyfill overrides
+// attachShadow() to observe the shadow root.
 require('./fix/safari');
+
+// We have to include this first so that it can patch native.
 require('./native-shim');
+
+// These must appear in this order. The ShadyCSS polyfill requires that the
+// ShadyDOM polyfill be loaded first.
 require('@webcomponents/custom-elements');
 require('@webcomponents/shadydom');
 require('@webcomponents/shadycss');
