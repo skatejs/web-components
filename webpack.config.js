@@ -10,10 +10,8 @@ conf.entry['dist/index.min.js'] = './src/index.js';
 // an unsupported environment.
 conf.plugins.push(new WebpackShellPlugin({
   onBuildStart: [
+    // eslint-disable-next-line
     'sed -e "s/\\\`/\\\\\\\\\\`/g" ./node_modules/@webcomponents/custom-elements/src/native-shim.js > ./src/native-shim.js',
     'echo "window.customElements && eval(\\`$(cat ./src/native-shim.js)\\`);" > ./src/native-shim.js'
-  ],
-  onBuildEnd: [
-    'rm -rf ./src/native-shim.js'
   ]
 }));
