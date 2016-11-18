@@ -33,3 +33,8 @@ node_modules
 
 # Bundle
 dist/
+
+
+# CUSTOM
+# ------
+src/native-shim.js
