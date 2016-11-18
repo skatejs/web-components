@@ -36,13 +36,9 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "1",
-    "regexp-replace-loader": "^0.0.1",
     "semantic-release": "4",
     "skatejs-build": "12",
-    "string-replace-loader": "^1.0.5",
-    "webpack-combine-loaders": "^2.0.3",
-    "webpack-shell-plugin": "^0.4.3",
-    "wrap-loader": "^0.1.0"
+    "webpack-shell-plugin": "^0.4.3"
   },
   "config": {
     "commitizen": {
