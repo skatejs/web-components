@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
-    "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/ccc48dd.tar.gz",
+    "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/cd37517.tar.gz",
     "@webcomponents/shadycss": "https://github.com/webcomponents/shadycss/archive/f2d02d5.tar.gz",
     "@webcomponents/shadydom": "https://github.com/webcomponents/shadydom/archive/d88a9ae.tar.gz"
   },
