@@ -9,4 +9,6 @@ require('./native-shim');
 // ShadyDOM polyfill be loaded first.
 require('@webcomponents/custom-elements');
 require('@webcomponents/shadydom');
-require('@webcomponents/shadycss');
+
+// No shadycss for this branch
+// require('@webcomponents/shadycss');
