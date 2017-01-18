@@ -1,5 +1,6 @@
 const WebpackShellPlugin = require('webpack-shell-plugin');
 const conf = module.exports = require('skatejs-build/webpack.config');
+conf.module.loaders[2].exclude = '';
 
 // Both index and index-with-deps should be the same.
 conf.entry['dist/index.js'] = './src/index.js';
