@@ -32,7 +32,8 @@
   "dependencies": {
     "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/36451e1.tar.gz",
     "@webcomponents/shadycss": "https://github.com/webcomponents/shadycss/archive/bea402d.tar.gz",
-    "@webcomponents/shadydom": "https://github.com/webcomponents/shadydom/archive/a8b4c4c.tar.gz"
+    "@webcomponents/shadydom": "https://github.com/webcomponents/shadydom/archive/a8b4c4c.tar.gz",
+    "es6-promise": "^4.0.5"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1",
