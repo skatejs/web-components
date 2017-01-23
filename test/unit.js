@@ -22,7 +22,7 @@ describe('skatejs-web-components', () => {
     expect(!!elem.shadowRoot).to.equal(true);
   });
 
-  if (ShadyDOM.inUse) {
+  if (ShadyDOM && ShadyDOM.inUse) {
     it('should transform custom-style in polyfill', (done) => {
       document.body.innerHTML = `
         <custom-style>
