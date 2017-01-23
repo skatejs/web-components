@@ -6,7 +6,9 @@
 //
 // See https://github.com/webcomponents/custom-elements/issues/45
 
-// Polyfill Promise in IE <= 11 required by some of the polyfills.
+// ES2015 polyfills required for the polyfills to work in older browsers.
+require('array.from').shim();
+require('object.assign').shim();
 require('es6-promise').polyfill();
 
 // We have to include this first so that it can patch native. This must be done
