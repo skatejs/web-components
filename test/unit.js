@@ -2,7 +2,12 @@
 
 import '../src/index';
 
-const { customElements, HTMLElement } = window;
+const {
+  customElements,
+  HTMLElement,
+  ShadyCSS,
+  ShadyDOM
+} = window;
 
 describe('skatejs-web-components', () => {
   it('should create a custom element with a shadow root', () => {
@@ -16,4 +21,25 @@ describe('skatejs-web-components', () => {
     const elem = new Elem();
     expect(!!elem.shadowRoot).to.equal(true);
   });
+
+  if (ShadyDOM.inUse) {
+    it('should transform custom-style in polyfill', (done) => {
+      document.body.innerHTML = `
+        <custom-style>
+          <style>
+            .test {
+              color: red;
+            }
+          </style>
+        </custom-style>
+      `;
+
+      ShadyCSS.updateStyles();
+      setTimeout(() => {
+        const style = document.body.querySelector('custom-style');
+        expect(style.innerHTML).to.contain('.test:not(.style-scope)');
+        done();
+      }, 100);
+    });
+  }
 });
