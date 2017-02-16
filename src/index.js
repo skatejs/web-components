@@ -12,8 +12,13 @@ require('object.assign').shim();
 require('es6-promise').polyfill();
 
 // We have to include this first so that it can patch native. This must be done
-// befoer any polyfills are loaded.
+// before any polyfills are loaded.
 require('./native-shim');
+
+// Template polyfill is necessary to use shadycss in IE11
+// this comes before custom elements because of
+// https://github.com/webcomponents/template/blob/master/template.js#L39
+require('@webcomponents/template');
 
 // This comes after the native shim because it requries it to be patched first.
 require('@webcomponents/custom-elements/src/custom-elements');
@@ -30,6 +35,6 @@ if (safari && safariVersions.indexOf(safariVersion) > -1) {
 }
 
 // ShadyDOM comes first. Both because it may need to be forced and the
-// ShadyCSS polyill requires it to function.
+// ShadyCSS polyfill requires it to function.
 require('@webcomponents/shadydom/src/env');
 require('@webcomponents/shadycss/index');

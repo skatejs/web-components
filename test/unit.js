@@ -42,4 +42,11 @@ describe('skatejs-web-components', () => {
       }, 100);
     });
   }
+
+  it('should not throw on setting <template> innerHTML', () => {
+    const template = document.createElement('template');
+    expect(() => {
+      template.innerHTML = '<style></style>';
+    }).to.not.throw(Error);
+  });
 });
