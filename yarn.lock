@@ -46,6 +46,10 @@
   version "0.0.1"
   resolved "https://github.com/webcomponents/shadydom/archive/a8b4c4c.tar.gz#a89b55258362664724315a44b1d5967668f7ceb1"
 
+"@webcomponents/template@https://github.com/webcomponents/template/archive/0973368.tar.gz":
+  version "0.0.1"
+  resolved "https://github.com/webcomponents/template/archive/0973368.tar.gz#d82e08cf132542bd088204fadcc6996ac30ab9ab"
+
 Base64@~0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/Base64/-/Base64-0.2.1.tgz#ba3a4230708e186705065e66babdd4c35cf60028"
