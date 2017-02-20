@@ -42,10 +42,6 @@
   version "0.0.1"
   resolved "https://github.com/webcomponents/shadycss/archive/bea402d.tar.gz#421871c681610899ba10a433e4c920c9a31f4666"
 
-"@webcomponents/shadydom@https://github.com/webcomponents/shadydom/archive/a8b4c4c.tar.gz":
-  version "0.0.1"
-  resolved "https://github.com/webcomponents/shadydom/archive/a8b4c4c.tar.gz#a89b55258362664724315a44b1d5967668f7ceb1"
-
 "@webcomponents/template@https://github.com/webcomponents/template/archive/0973368.tar.gz":
   version "0.0.1"
   resolved "https://github.com/webcomponents/template/archive/0973368.tar.gz#d82e08cf132542bd088204fadcc6996ac30ab9ab"
@@ -1219,6 +1215,10 @@ cliui@^2.1.0:
 clone@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.2.tgz#260b7a99ebb1edfe247538175f783243cb19d149"
+
+cloudydom@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cloudydom/-/cloudydom-1.0.1.tgz#f5039c0906b9f2e118a924668a1cd2fb273fe771"
 
 cmd-shim@~2.0.2:
   version "2.0.2"
