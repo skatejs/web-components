@@ -20,6 +20,6 @@ conf.plugins.push(new WebpackShellPlugin({
   ],
   onBuildEnd: [
     // Copy to dist so it's available to load standalone.
-    'cp -rf ./src/native-shim.js ./dist/'
+    'mkdir -p dist && cp -rf ./src/native-shim.js ./dist/'
   ]
 }));
