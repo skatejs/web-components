@@ -42,9 +42,9 @@
   version "0.0.1"
   resolved "https://github.com/webcomponents/shadycss/archive/bea402d.tar.gz#421871c681610899ba10a433e4c920c9a31f4666"
 
-"@webcomponents/template@https://github.com/webcomponents/template/archive/0973368.tar.gz":
+"@webcomponents/template@https://github.com/webcomponents/template/archive/60d743e.tar.gz":
   version "0.0.1"
-  resolved "https://github.com/webcomponents/template/archive/0973368.tar.gz#d82e08cf132542bd088204fadcc6996ac30ab9ab"
+  resolved "https://github.com/webcomponents/template/archive/60d743e.tar.gz#0455f7092d31c866e5ee9b6c0072f1a3f032e314"
 
 Base64@~0.2.0:
   version "0.2.1"

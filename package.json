@@ -33,7 +33,7 @@
   "dependencies": {
     "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/f4b6f1f.tar.gz",
     "@webcomponents/shadycss": "https://github.com/webcomponents/shadycss/archive/bea402d.tar.gz",
-    "@webcomponents/template": "https://github.com/webcomponents/template/archive/0973368.tar.gz",
+    "@webcomponents/template": "https://github.com/webcomponents/template/archive/60d743e.tar.gz",
     "array.from": "^1.0.3",
     "cloudydom": "^1.0.2",
     "es6-promise": "^4.0.5",
