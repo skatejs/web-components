@@ -3,6 +3,7 @@
   "description": "",
   "jsnext:main": "src/index.js",
   "main": "dist/index.js",
+  "version": "0.0.0",
   "scripts": {
     "prepublish": "sk-bundle",
     "test": "sk-tests"
@@ -30,16 +31,17 @@
   },
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
-    "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/36451e1.tar.gz",
+    "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/f4b6f1f.tar.gz",
     "@webcomponents/shadycss": "https://github.com/webcomponents/shadycss/archive/bea402d.tar.gz",
     "@webcomponents/template": "https://github.com/webcomponents/template/archive/0973368.tar.gz",
-    "cloudydom": "^1.0.1",
     "array.from": "^1.0.3",
+    "cloudydom": "^1.0.2",
     "es6-promise": "^4.0.5",
     "object.assign": "^4.0.4"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1",
+    "fs": "^0.0.1-security",
     "semantic-release": "4",
     "skatejs-build": "12",
     "webpack-shell-plugin": "^0.4.3"
