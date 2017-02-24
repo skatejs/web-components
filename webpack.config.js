@@ -16,13 +16,15 @@ class ModifyAndCopyNativeShim {
     this.srcPath = './src/native-shim.js';
     this.distPath = './dist/native-shim.js';
     this.modify = (str) => {
+      // Escape all backtick characters so we can wrap it in a template literal.
       str = str.replace(/`/g, '\\`');
+      
+      // Wrap in a conditional eval so it doesn't get executed in non-supported environments.
       return 'window.customElements && eval(`' + str + '`);';
     };
   }
 
   apply (compiler) {
-    
     /* PRE BUILD */
     compiler.plugin('compilation', (compilation) => {
       fs.readFile(this.originalPath, 'utf8', (err, data) => {
@@ -34,7 +36,7 @@ class ModifyAndCopyNativeShim {
       });
     });
 
-    /* POST BUILD */
+    // Copy to dist so it's available to load standalone.
     compiler.plugin('after-emit', (compilation, callback) => {
       fs.writeFile(this.distPath, this.result, 'utf8', (err) => {
         if (err) return console.log(err);
