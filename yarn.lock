@@ -34,9 +34,9 @@
     conventional-changelog "0.0.17"
     github-url-from-git "^1.4.0"
 
-"@webcomponents/custom-elements@https://github.com/webcomponents/custom-elements/archive/36451e1.tar.gz":
-  version "1.0.0-alpha.3"
-  resolved "https://github.com/webcomponents/custom-elements/archive/36451e1.tar.gz#cd5c86c032a375a5416e00a13e84455c2d716df0"
+"@webcomponents/custom-elements@https://github.com/webcomponents/custom-elements/archive/f4b6f1f.tar.gz":
+  version "1.0.0-alpha.4"
+  resolved "https://github.com/webcomponents/custom-elements/archive/f4b6f1f.tar.gz#4b02263d85d08619244951765da37fdb83ac1c7d"
 
 "@webcomponents/shadycss@https://github.com/webcomponents/shadycss/archive/bea402d.tar.gz":
   version "0.0.1"
@@ -1216,9 +1216,9 @@ clone@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.2.tgz#260b7a99ebb1edfe247538175f783243cb19d149"
 
-cloudydom@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/cloudydom/-/cloudydom-1.0.1.tgz#f5039c0906b9f2e118a924668a1cd2fb273fe771"
+cloudydom@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/cloudydom/-/cloudydom-1.0.2.tgz#d1328175e2824f7b995f45b367d51851e0dd93f8"
 
 cmd-shim@~2.0.2:
   version "2.0.2"
@@ -2550,6 +2550,10 @@ fs-write-stream-atomic@~1.0.8:
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
+
+fs@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/fs/-/fs-0.0.1-security.tgz#8a7bd37186b6dddf3813f23858b57ecaaf5e41d4"
 
 fsevents@^1.0.0:
   version "1.0.15"
