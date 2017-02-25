@@ -41,7 +41,6 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "1",
-    "fs": "^0.0.1-security",
     "semantic-release": "4",
     "skatejs-build": "12",
     "webpack-shell-plugin": "^0.4.3"
