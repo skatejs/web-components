@@ -36,5 +36,5 @@ if (safari && safariVersions.indexOf(safariVersion) > -1) {
 
 // ShadyDOM comes first. Both because it may need to be forced and the
 // ShadyCSS polyfill requires it to function.
-require('cloudydom/src/env');
+require('cloudydom/src/shadydom');
 require('@webcomponents/shadycss/index');
