@@ -1,12 +1,12 @@
 {
-  "name": "skatejs-web-components",
-  "description": "",
+  "name": "@skatejs/web-components",
+  "description": "Including the web component polyfills just got simpler.",
   "jsnext:main": "src/index.js",
-  "main": "dist/index.js",
-  "version": "0.0.0",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "scripts": {
-    "prepublish": "sk-bundle",
-    "test": "sk-tests"
+    "prepublish": "nwb build",
+    "test": "nwb test"
   },
   "keywords": [
     "components",
@@ -31,19 +31,18 @@
   },
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
-    "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/f4b6f1f.tar.gz",
-    "@webcomponents/shadycss": "https://github.com/webcomponents/shadycss/archive/bea402d.tar.gz",
-    "@webcomponents/template": "https://github.com/webcomponents/template/archive/60d743e.tar.gz",
-    "array.from": "^1.0.3",
-    "cloudydom": "^1.0.2",
-    "es6-promise": "^4.0.5",
-    "object.assign": "^4.0.4"
+    "@webcomponents/custom-elements": "*",
+    "@webcomponents/shadycss": "*",
+    "@webcomponents/template": "*",
+    "array.from": "*",
+    "cloudydom": "*",
+    "es6-promise": "*",
+    "object.assign": "*"
   },
   "devDependencies": {
     "cz-conventional-changelog": "1",
-    "semantic-release": "4",
-    "skatejs-build": "12",
-    "webpack-shell-plugin": "^0.4.3"
+    "nwb": "0.15.x",
+    "semantic-release": "4"
   },
   "config": {
     "commitizen": {

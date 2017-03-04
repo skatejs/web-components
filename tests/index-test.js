@@ -1,6 +1,7 @@
 /* eslint-env jasmine, mocha */
 
-import '../src/index';
+import expect from 'expect';
+import 'src';
 
 const {
   customElements,

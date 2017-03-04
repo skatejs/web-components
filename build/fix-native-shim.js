@@ -1,16 +1,10 @@
-const conf = module.exports = require('skatejs-build/webpack.config');
-conf.module.loaders[2].exclude = '';
-
-// Both index and index-with-deps should be the same.
-conf.entry['dist/index.js'] = './src/index.js';
-conf.entry['dist/index.min.js'] = './src/index.js';
-
 // Ensures the native-shim is wrapped in a conditional eval. This is so that it
 // can be simply included all of the time without worry it will be executed in
 // an unsupported environment.
 
 const fs = require('fs');
-class ModifyAndCopyNativeShim {
+
+export default class ModifyAndCopyNativeShim {
   constructor () {
     this.originalPath = './node_modules/@webcomponents/custom-elements/src/native-shim.js';
     this.srcPath = './src/native-shim.js';
@@ -18,7 +12,7 @@ class ModifyAndCopyNativeShim {
     this.modify = (str) => {
       // Escape all backtick characters so we can wrap it in a template literal.
       str = str.replace(/`/g, '\\`');
-      
+
       // Wrap in a conditional eval so it doesn't get executed in non-supported environments.
       return 'window.customElements && eval(`' + str + '`);';
     };
@@ -45,5 +39,3 @@ class ModifyAndCopyNativeShim {
     });
   }
 }
-
-conf.plugins.push(new ModifyAndCopyNativeShim());

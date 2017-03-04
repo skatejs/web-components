@@ -40,4 +40,4 @@ require(['skatejs-web-components']);
 Or you can use a `<script>` tag:
 
 ```html
-<script src="https://unpkg.com/skatejs-web-components/dist/index-with-deps.min.js"></script>
+<script src="https://unpkg.com/skatejs-web-components/umd/skatejs-web-components.min.js"></script>
