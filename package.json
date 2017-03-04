@@ -31,9 +31,9 @@
   },
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
-    "@webcomponents/custom-elements": "*",
-    "@webcomponents/shadycss": "*",
-    "@webcomponents/template": "*",
+    "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/f4b6f1f.tar.gz",
+    "@webcomponents/shadycss": "https://github.com/webcomponents/shadycss/archive/bea402d.tar.gz",
+    "@webcomponents/template": "https://github.com/webcomponents/template/archive/60d743e.tar.gz",
     "array.from": "*",
     "cloudydom": "*",
     "es6-promise": "*",
