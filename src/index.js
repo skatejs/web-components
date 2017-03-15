@@ -21,7 +21,7 @@ require('./native-shim');
 require('@webcomponents/template');
 
 // This comes after the native shim because it requries it to be patched first.
-require('@webcomponents/custom-elements/src/custom-elements');
+require('@webcomponents/custom-elements');
 
 // Force the polyfill in Safari 10.0.0 and 10.0.1.
 const { navigator } = window;
@@ -36,5 +36,5 @@ if (safari && safariVersions.indexOf(safariVersion) > -1) {
 
 // ShadyDOM comes first. Both because it may need to be forced and the
 // ShadyCSS polyfill requires it to function.
-require('cloudydom/src/shadydom');
-require('@webcomponents/shadycss/index');
+require('cloudydom');
+require('@webcomponents/shadycss');

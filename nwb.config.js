@@ -3,5 +3,8 @@ module.exports = {
   npm: {
     esModules: true,
     umd: true
+  },
+  karma: {
+    browsers: [require('karma-firefox-launcher')]
   }
 };

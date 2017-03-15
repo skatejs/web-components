@@ -11,13 +11,13 @@ This repo gives you the bare minimum you'd need in an environment that doesn't s
 You can install via NPM:
 
 ```sh
-npm install skatejs-web-components
+npm install @skatejs/web-components
 ```
 
 Or you can download it from unpkg:
 
 ```
-https://unpkg.com/skatejs-web-components/dist/index-with-deps.min.js
+https://unpkg.com/@skatejs/web-components
 ```
 
 
@@ -28,16 +28,16 @@ You can import it using any module format:
 
 ```js
 // ES2015
-import 'skatejs-web-components';
+import '@skatejs/web-components';
 
 // CommonJS
-require('skatejs-web-components');
+require('@skatejs/web-components');
 
 // AMD
-require(['skatejs-web-components']);
+require(['@skatejs/web-components']);
 ```
 
 Or you can use a `<script>` tag:
 
 ```html
-<script src="https://unpkg.com/skatejs-web-components/umd/skatejs-web-components.min.js"></script>
+<script src="https://unpkg.com/@skatejs/web-components/umd/@skatejs/web-components.min.js"></script>

@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/skatejs/web-components#readme",
   "dependencies": {
-    "@webcomponents/custom-elements": "https://github.com/webcomponents/custom-elements/archive/f4b6f1f.tar.gz",
-    "@webcomponents/shadycss": "https://github.com/webcomponents/shadycss/archive/bea402d.tar.gz",
+    "@webcomponents/custom-elements": "latest",
+    "@webcomponents/shadycss": "https://github.com/webcomponents/shadycss/archive/c396485.tar.gz",
     "@webcomponents/template": "https://github.com/webcomponents/template/archive/60d743e.tar.gz",
     "array.from": "*",
     "cloudydom": "*",
@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "1",
+    "karma-firefox-launcher": "^1.0.0",
     "nwb": "0.15.x",
     "semantic-release": "4"
   },
