@@ -1,6 +1,7 @@
 /* eslint-env jasmine, mocha */
 
 import expect from 'expect';
+
 import 'src';
 
 const {
@@ -20,7 +21,7 @@ describe('skatejs-web-components', () => {
     };
     customElements.define('x-test-1', Elem);
     const elem = new Elem();
-    expect(!!elem.shadowRoot).to.equal(true);
+    expect(!!elem.shadowRoot).toBe(true);
   });
 
   if (ShadyDOM && ShadyDOM.inUse) {
@@ -35,10 +36,10 @@ describe('skatejs-web-components', () => {
         </custom-style>
       `;
 
-      ShadyCSS.updateStyles();
+      ShadyCSS.styleDocument();
       setTimeout(() => {
         const style = document.body.querySelector('custom-style');
-        expect(style.innerHTML).to.contain('.test:not(.style-scope)');
+        expect(style.innerHTML).toContain('.test {');
         done();
       }, 100);
     });
@@ -48,6 +49,6 @@ describe('skatejs-web-components', () => {
     const template = document.createElement('template');
     expect(() => {
       template.innerHTML = '<style></style>';
-    }).to.not.throw(Error);
+    }).toNotThrow(Error);
   });
 });

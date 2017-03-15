@@ -37,4 +37,6 @@ if (safari && safariVersions.indexOf(safariVersion) > -1) {
 // ShadyDOM comes first. Both because it may need to be forced and the
 // ShadyCSS polyfill requires it to function.
 require('cloudydom');
-require('@webcomponents/shadycss');
+require('@webcomponents/shadycss/scoping-shim.min');
+require('@webcomponents/shadycss/apply-shim.min');
+require('@webcomponents/shadycss/custom-style-interface.min');
