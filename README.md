@@ -1,3 +1,7 @@
+# Deprecation notice
+
+A siginficant amount of work and imporovements have gone into the [webcomponentsjs polyfills](https://github.com/webcomponents/webcomponentsjs), so we recommend you use that instead now. If you want to intelligently load what you need, use the webcomponents loader they've documented.
+
 # SkateJS Web Components
 
 This repo gives you the bare minimum you'd need in an environment that doesn't support Custom Elements or Shadow DOM natively. It gives you support for the V1 APIs of each respectively and ensures all their polyfill dependencies are met all through a single import.
